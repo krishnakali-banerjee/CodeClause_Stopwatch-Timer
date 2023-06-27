@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <title>Stopwatch and Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="x icon" href="icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="icon.png" alt="">STOPWATCH & TIMER</a>
+        </div>
+        <div class="toggle" >
+            <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+        </div>
+        <ul class="menu">
+            <li><a href="#container" class="first">Home</a></li>
+            <li><a href="#footer" class="first">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container" id="container">
+        <div class="headmain">
+            <h3>Stopwatch and Timer</h3>
+            <h3>Clock</h3>
+        </div>
+        <div class="outer_wrapper">
+            <!-- CLOCK -->
+            <div class="clock" id="clock">
+                <div class="inner_wrapper">
+                    <div class="main">
+                        <div class="hour">
+                            <p class="number" id="hour">00</p>
+                            <p>hours</p>
+                        </div>
+                        <p class="colon"> : </p>
+                        <div class="min">
+                            <p class="number" id="min">00</p>
+                            <p>minutes</p>
+                        </div>
+                        <p class="colon"> : </p>
+                        <div class="sec">
+                            <p class="number" id="sec">00</p>
+                            <p>seconds</p>
+                        </div>
+                        <p class="colon"> : </p>
+                        <div class="ampm">
+                            <p class="number" id="ampm">AM</p>
+                            <p>AM/PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="btn" id="stopwatch" onclick=button_stopvisible()>STOPWATCH</button>
+                    <button class="btn" id="timer" onclick=button_timervisible()>TIMER</button>
+                </div>
+            </div>
+            <!-- STOPWATCH -->
+            <div class="stopwatch" id="stop_visible">
+                <div class="inner_wrapper">
+                    <div class="main">
+                        <div class="hour">
+                            <p class="number" id="stop_hour">00</p>
+                            <p>hours</p>
+                        </div>
+                        <p class="colon"> : </p>
+                        <div class="min">
+                            <p class="number" id="stop_min">00</p>
+                            <p>minutes</p>
+                        </div>
+                        <p class="colon"> : </p>
+                        <div class="sec">
+                            <p class="number" id="stop_sec">00</p>
+                            <p>seconds</p>
+                        </div>
+                        <p class="colon"> : </p>
+                        <div class="mseconds">
+                            <p class="number" id="stop_msec">00</p>
+                            <p>milliseconds</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="btn" id="start" onclick=startfunc()>START</button>
+                    <button class="btn hidden" id="lap" onclick=lapfunc()>LAP</button>
+                    <button class="btn" id="pause" onclick=pausefunc()>PAUSE</button>
+                    <button class="btn" id="reset" onclick=resetfunc()>RESET</button>
+                    <button class="btn" id="back" onclick=backfunc()>BACK</button>
+                </div>
+                <ul class="laps" id="lap_id">
+                </ul>
+            </div>
+            <!-- TIMER -->
+            <div class="timer" id="timer_visible">
+                <div class="inner_wrapper">
+                    <div class="main">
+                        <div class="hour">
+                            <input type="number" id="timer_hour" class="number" placeholder="00" autocomplete="off" value="">
+                            <p>hours</p>
+                        </div>
+                        <p class="colon"> : </p>
+                        <div class="min">
+                            <input type="number" id="timer_min" class="number" placeholder="00" autocomplete="off" value="">
+                            <p>minutes</p>
+                        </div>
+                        <p class="colon"> : </p>
+                        <div class="sec">
+                            <input type="number" id="timer_sec" class="number" placeholder="00" autocomplete="off" value="">
+                            <p>seconds</p>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="btn" id="timer_start" onclick=tmstartfunc()>START</button>
+                    <button class="btn" id="timer_reset" onclick=tmresetfunc()>RESET</button>
+                    <button class="btn" id="back" onclick=backfunc()>BACK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer" id="footer">
+        <footer>
+            <ul>
+                <li><ion-icon name="mail-outline"></ion-icon><a href="mailto:krishnakalibanerjeeXX@gmail.com">krishnakalibanerjeeXX@gmail.com</a></li>
+                <li><ion-icon name="call-outline"></ion-icon><a href="tel:+7586XXXXXX">7586XXXXXX</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
